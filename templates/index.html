@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Kod</title>
+</head>
+
+<body>
+    <center>
+        <h1>QR Kodlar</h1>
+    </center>
+    <div style="display: flex; justify-content:space-around; align-items:center;">
+        {% for qr in qr_codes %}
+        <div>
+            <h2>{{ qr.name }}</h2>
+            <img src="{% static qr.qr_image_path  %}" alt="QR Kod">
+            <p>QR Kod Toplam baxılma sayı: {{ qr.scan_count }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+asgiref==3.7.2
+colorama==0.4.6
+Django==4.2.4
+django-cors-headers==4.2.0
+django-filter==23.2
+djangorestframework==3.14.0
+Markdown==3.4.4
+Pillow==10.0.0
+pypng==0.20220715.0
+pytz==2023.3
+qrcode==7.4.2
+sqlparse==0.4.4
+typing_extensions==4.7.1
+tzdata==2023.3

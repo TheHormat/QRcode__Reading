@@ -7,7 +7,7 @@ class QrCode(models.Model):
     scan_count = models.PositiveIntegerField(default=0)
 
     def save(self, *args, **kwargs):
-        super(QrCode, self).save(*args, **kwargs)  # Önce modelin normal save metodu çağırılıyor.
+        super(QrCode, self).save(*args, **kwargs) 
         redirect_url = self.url
         create_qr_code_image(redirect_url, self.id)
         
